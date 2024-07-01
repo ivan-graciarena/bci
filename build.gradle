@@ -38,19 +38,8 @@ dependencies {
     implementation 'javax.xml.bind:jaxb-api:2.3.0'
     // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
     implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
-//    // https://mvnrepository.com/artifact/org.spockframework/spock-core
-//    implementation 'org.spockframework:spock-core:2.0-M4-groovy-3.0'
-//    implementation 'org.spockframework:spock-spring:2.0-M4-groovy-3.0'
     implementation platform('org.apache.groovy:groovy-bom:4.0.16')
     implementation 'org.apache.groovy:groovy'
-    testImplementation platform("org.spockframework:spock-bom:2.3-groovy-4.0")
-    testImplementation "org.spockframework:spock-core"
-    testImplementation "org.spockframework:spock-junit4"  // you can remove this if your code does not rely on old JUnit 4 rules
-
-    // optional dependencies for using Spock
-    testImplementation "org.hamcrest:hamcrest-core:2.2"   // only necessary if Hamcrest matchers are used
-    testRuntimeOnly 'net.bytebuddy:byte-buddy:1.14.10' // allows mocking of classes (in addition to interfaces)
-    testRuntimeOnly "org.objenesis:objenesis:3.3"      // allows mocking of classes without default constructor (together with ByteBuddy or CGLIB)
 
 }
 
