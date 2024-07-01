@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "7c484d93-03dc-47e1-a6a6-83124cab8a07",
+		"name": "bci-ivan-graciarena",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20375956"
+	},
+	"item": [
+		{
+			"name": "Sign-up",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Ivan\",\r\n\t\"email\": \"mypersonal.email@gmail.com\",\r\n\t\"password\": \"SomeResis11\",\r\n\t\"phones\": [\r\n\t\t{\r\n\t\t\t\"number\": \"22355932991\",\r\n\t\t\t\"citycode\": \"7600\",\r\n\t\t\t\"countrycode\": \"MDQ\"\r\n\t\t}\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/sign-up",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log-in",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJteXBlcnNvbmFsLmVtYWlsQGdtYWlsLmNvbSIsImlkIjoiMzM3ZjUyOGUtNWU2NC00ODEyLTg4MDktNTU1NmUzMDYzNjY3IiwibmFtZSI6Ikl2YW4iLCJwYXNzd29yZCI6IiQyYSQxMCRYanpWSXhtY0JxOFpxVWpGTDVqTE9lUnBoTW90amVxUUlZTS5US0ZNY0MxZFVMY0Q3Vjc1VyIsImV4cCI6MTcwMTgwNTMxN30.awLSfN-Y9fTkT_cmT6lGeBpx8ubdtrEEpv9_JLO_N8g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\":\"mypersonal.email@gmail.com\",\r\n\t\"password\":\"SomeResis11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/log-in",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"log-in"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
